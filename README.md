@@ -1,8 +1,8 @@
 # LOANMATCH - Website tìm kiếm, lọc và so sánh khoản vay
-
+---
 ## 1. Giới thiệu dự án
 **LOANMATCH** là website hỗ trợ người dùng **tìm kiếm, lọc và so sánh các khoản vay** phù hợp với nhu cầu cá nhân.
-Thay vì phải truy cập nhiều website của ngân hàng hoặc tổ chức tài chính khác nhau để tìm hiểu thông tin, LOANMATCH tập trung các thông tin về khoản vay trên một giao diện thống nhất.
+LOANMATCH tập trung các thông tin về khoản vay trên một giao diện thống nhất.
 Website giúp người dùng dễ dàng theo dõi và so sánh các tiêu chí như:
 - Lãi suất
 - Hạn mức vay
@@ -11,7 +11,6 @@ Website giúp người dùng dễ dàng theo dõi và so sánh các tiêu chí n
 - Đối tượng phù hợp
 - Điều kiện và thông tin liên quan đến khoản vay
 > **Lưu ý:** LOANMATCH không phải là website cho vay và không xử lý hồ sơ vay thực tế. Website chỉ phục vụ mục đích tra cứu thông tin, tìm kiếm, lọc, so sánh, mô phỏng khoản vay và đăng ký tư vấn.
->
 > Các sản phẩm khoản vay trên website là **dữ liệu giả lập**, được xây dựng nhằm phục vụ mục đích học tập và trình diễn chức năng.
 ---
 ## 2. Vấn đề cần giải quyết
@@ -183,7 +182,11 @@ LOANMATCH/
 └── README.md
 ```
 ---
-## 10. Thành viên + Phân công tuần đầu
+## 10. Hướng dẫn chạy dự án
+
+
+---
+## 11. Thành viên + Phân công tuần đầu
 ### Nhóm Compiled
 | **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** |
 | --- | --- | --- | 
