@@ -43,14 +43,14 @@ LOANMATCH hướng đến các nhóm người dùng:
 ---
 ## 4. Mục tiêu dự án
 Dự án LOANMATCH được xây dựng với các mục tiêu:
-1. Xây dựng website có giao diện trực quan, thống nhất và dễ sử dụng.
-2. Hỗ trợ người dùng tìm kiếm khoản vay theo nhu cầu.
-3. Cho phép người dùng lọc và sắp xếp các khoản vay.
-4. Cho phép người dùng so sánh nhiều khoản vay trên cùng một giao diện.
-5. Xây dựng công cụ mô phỏng khoản trả hàng tháng.
-6. Xây dựng biểu mẫu đăng ký tư vấn.
-7. Áp dụng JavaScript/jQuery để tạo các chức năng tương tác.
-8. Áp dụng Bootstrap để xây dựng giao diện Responsive trên máy tính, máy tính bảng và điện thoại.
+- Xây dựng website có giao diện trực quan, thống nhất và dễ sử dụng.
+- Hỗ trợ người dùng tìm kiếm khoản vay theo nhu cầu.
+- Cho phép người dùng lọc và sắp xếp các khoản vay.
+- Cho phép người dùng so sánh nhiều khoản vay trên cùng một giao diện.
+- Xây dựng công cụ mô phỏng khoản trả hàng tháng.
+- Xây dựng biểu mẫu đăng ký tư vấn.
+- Áp dụng JavaScript/jQuery để tạo các chức năng tương tác.
+- Áp dụng Bootstrap để xây dựng giao diện Responsive trên máy tính, máy tính bảng và điện thoại.
 ---
 ## 5. Các chức năng chính
 ### 5.1. Trang chủ
