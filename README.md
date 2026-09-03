@@ -1,5 +1,5 @@
 # LOANMATCH - Website tìm kiếm, lọc và so sánh khoản vay
----
+
 ## 1. Giới thiệu dự án
 **LOANMATCH** là website hỗ trợ người dùng **tìm kiếm, lọc và so sánh các khoản vay** phù hợp với nhu cầu cá nhân.
 LOANMATCH tập trung các thông tin về khoản vay trên một giao diện thống nhất.
@@ -12,7 +12,7 @@ Website giúp người dùng dễ dàng theo dõi và so sánh các tiêu chí n
 - Điều kiện và thông tin liên quan đến khoản vay
 > **Lưu ý:** LOANMATCH không phải là website cho vay và không xử lý hồ sơ vay thực tế. Website chỉ phục vụ mục đích tra cứu thông tin, tìm kiếm, lọc, so sánh, mô phỏng khoản vay và đăng ký tư vấn.
 > Các sản phẩm khoản vay trên website là **dữ liệu giả lập**, được xây dựng nhằm phục vụ mục đích học tập và trình diễn chức năng.
----
+
 ## 2. Vấn đề cần giải quyết
 Hiện nay, khi muốn tìm hiểu về một khoản vay, người dùng thường phải truy cập nhiều website khác nhau.
 Thông tin về:
@@ -24,7 +24,7 @@ Thông tin về:
 có thể được trình bày theo nhiều cách khác nhau.
 Điều này khiến người dùng mất nhiều thời gian và khó đặt các sản phẩm vay cạnh nhau để so sánh.
 **LOANMATCH** giải quyết vấn đề này bằng cách tập trung và chuẩn hóa thông tin khoản vay trên một giao diện thống nhất, giúp người dùng tìm kiếm, lọc và so sánh khoản vay dễ dàng hơn.
----
+
 ## 3. Đối tượng người dùng
 LOANMATCH hướng đến các nhóm người dùng:
 ### Sinh viên năm cuối
@@ -39,7 +39,7 @@ LOANMATCH hướng đến các nhóm người dùng:
 - Muốn tìm kiếm và lọc khoản vay theo nhu cầu.
 - Muốn so sánh nhiều sản phẩm trên cùng một giao diện.
 - Muốn mô phỏng khoản trả hàng tháng trước khi tham khảo.
----
+
 ## 4. Mục tiêu dự án
 Dự án LOANMATCH được xây dựng với các mục tiêu:
 - Xây dựng website có giao diện trực quan, thống nhất và dễ sử dụng.
@@ -50,7 +50,7 @@ Dự án LOANMATCH được xây dựng với các mục tiêu:
 - Xây dựng biểu mẫu đăng ký tư vấn.
 - Áp dụng JavaScript/jQuery để tạo các chức năng tương tác.
 - Áp dụng Bootstrap để xây dựng giao diện Responsive trên máy tính, máy tính bảng và điện thoại.
----
+
 ## 5. Các chức năng chính
 ### 5.1. Trang chủ
 Trang chủ giới thiệu tổng quan về LOANMATCH, bao gồm:
@@ -110,11 +110,10 @@ JavaScript/jQuery được sử dụng để:
 - Kiểm tra dữ liệu nhập vào.
 - Kiểm tra các trường bắt buộc.
 - Hiển thị thông báo kết quả.
----
+
 ## 6. Dữ liệu khoản vay
 Website sử dụng khoảng **10–15 khoản vay giả lập** để phục vụ xây dựng và kiểm thử các chức năng.
 Mỗi khoản vay bao gồm các thông tin:
-- ID
 - Tên khoản vay
 - Loại khoản vay
 - Lãi suất
@@ -125,7 +124,7 @@ Mỗi khoản vay bao gồm các thông tin:
 - Phương thức trả
 - Đối tượng phù hợp
 - Mô tả
----
+
 ## 7. Công nghệ sử dụng
 | **Công nghệ** | **Mục đích** |
 |---|---|
@@ -136,8 +135,6 @@ Mỗi khoản vay bao gồm các thông tin:
 | jQuery | Hỗ trợ DOM và xử lý sự kiện |
 | Git | Quản lý phiên bản |
 | GitHub | Lưu trữ và quản lý mã nguồn |
-
----
 
 ## 8. Thiết kế Responsive
 Website được thiết kế để hoạt động trên:
@@ -152,7 +149,6 @@ Các thành phần cần đảm bảo Responsive:
 - Bảng so sánh.
 - Công cụ tính khoản vay.
 - Form đăng ký tư vấn.
----
 ## 9. Cấu trúc dự án
 ```text
 LOANMATCH/
@@ -181,11 +177,12 @@ LOANMATCH/
 │
 └── README.md
 ```
----
 ## 10. Hướng dẫn chạy dự án
+Chạy bằng Live Server trên VS code
+- Mở file Readme.md trong VS code
+- Cài đặt extension **Live Server** trong VS code
+- Nhấp chuột phải vào file index.html và chọn **Open with live server** (hoặc bấm nút **Go live** ở góc dưới cùng bên phải)
 
-
----
 ## 11. Thành viên + Phân công tuần đầu
 ### Nhóm Compiled
 | **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** |
