@@ -85,7 +85,7 @@ Hiển thị thông tin chi tiết của từng khoản vay:
 ### 5.4. Trang so sánh khoản vay
 Cho phép người dùng lựa chọn nhiều khoản vay và đặt chúng cạnh nhau để so sánh.
 Các tiêu chí so sánh gồm:
-| Tiêu chí | Nội dung |
+| **Tiêu chí** | **Nội dung** |
 |---|---|
 | Lãi suất | So sánh mức lãi suất |
 | Hạn mức | So sánh số tiền vay tối thiểu/tối đa |
@@ -139,7 +139,8 @@ Mỗi khoản vay bao gồm các thông tin:
 | GitHub | Lưu trữ và quản lý mã nguồn |
 
 ---
-**## 8. Thiết kế Responsive**
+
+## 8. Thiết kế Responsive
 Website được thiết kế để hoạt động trên:
 - Máy tính.
 - Máy tính bảng.
@@ -180,13 +181,14 @@ LOANMATCH/
 ├── images/
 │
 └── README.md
+```
 ---
 ## 10. Thành viên + Phân công tuần đầu
 ### Nhóm Compiled
-| Tên thành viên | Mã sinh viên | 
-| --- | --- |
-| Lê Minh Tiểu Phượng | 27A4043339 |
-| Phan Thị Tùng Giang | 27A4043287 |
-| Vùi Vũ Hà Nhi | 27A4043333 |
-| Nguyễn Bảo Anh | 27A4043266 |
+| **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** |
+| --- | --- | --- | 
+| Lê Minh Tiểu Phượng | 27A4043339 | File đề xuất dự án |
+| Phan Thị Tùng Giang | 27A4043287 | Readme bản đầu và phân công |
+| Vùi Vũ Hà Nhi | 27A4043333 | Mô tả dự án |
+| Nguyễn Bảo Anh | 27A4043266 | File đề xuất dự án |
 
