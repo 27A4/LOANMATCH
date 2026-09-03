@@ -127,8 +127,8 @@ Mỗi khoản vay bao gồm các thông tin:
 - Đối tượng phù hợp
 - Mô tả
 ---
-## 7. Công nghệ sử dụng-
-| Công nghệ | Mục đích |
+## 7. Công nghệ sử dụng
+| **Công nghệ** | **Mục đích** |
 |---|---|
 | HTML5 | Xây dựng cấu trúc website |
 | CSS3 | Thiết kế giao diện |
@@ -139,7 +139,7 @@ Mỗi khoản vay bao gồm các thông tin:
 | GitHub | Lưu trữ và quản lý mã nguồn |
 
 ---
-## 8. Thiết kế Responsive
+**## 8. Thiết kế Responsive**
 Website được thiết kế để hoạt động trên:
 - Máy tính.
 - Máy tính bảng.
@@ -180,5 +180,13 @@ LOANMATCH/
 ├── images/
 │
 └── README.md
-
+---
+## 10. Thành viên + Phân công tuần đầu
+### Nhóm Compiled
+| Tên thành viên | Mã sinh viên | 
+| --- | --- |
+| Lê Minh Tiểu Phượng | 27A4043339 |
+| Phan Thị Tùng Giang | 27A4043287 |
+| Vùi Vũ Hà Nhi | 27A4043333 |
+| Nguyễn Bảo Anh | 27A4043266 |
 
