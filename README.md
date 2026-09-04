@@ -172,10 +172,10 @@ Chạy bằng Live Server trên VS code
 
 ## 10. Thành viên + Phân công tuần đầu
 ### Nhóm Compiled
-| **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** | **Profile Github**
-| --- | --- | --- | 
+| **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** | **Profile Github** |
+| --- | --- | --- | ---| 
 | Lê Minh Tiểu Phượng | 27A4043339 | File đề xuất dự án | TieuPhuong0405 |
-| Phan Thị Tùng Giang | 27A4043287 | Readme bản đầu và phân công | 
+| Phan Thị Tùng Giang | 27A4043287 | Readme bản đầu và phân công | 27A4 |
 | Vùi Vũ Hà Nhi | 27A4043333 | Mô tả dự án | hanhi120306-code |
 | Nguyễn Bảo Anh | 27A4043266 | File đề xuất dự án | baoanhnguyena1 |
 
