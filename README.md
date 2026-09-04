@@ -136,20 +136,7 @@ Mỗi khoản vay bao gồm các thông tin:
 | Git | Quản lý phiên bản |
 | GitHub | Lưu trữ và quản lý mã nguồn |
 
-## 8. Thiết kế Responsive
-Website được thiết kế để hoạt động trên:
-- Máy tính.
-- Máy tính bảng.
-- Điện thoại.
-Các thành phần cần đảm bảo Responsive:
-- Thanh điều hướng.
-- Banner.
-- Loan Card.
-- Bộ lọc.
-- Bảng so sánh.
-- Công cụ tính khoản vay.
-- Form đăng ký tư vấn.
-## 9. Cấu trúc dự án
+## 8. Cấu trúc dự án
 ```text
 LOANMATCH/
 │
@@ -177,18 +164,18 @@ LOANMATCH/
 │
 └── README.md
 ```
-## 10. Hướng dẫn chạy dự án
+## 9. Hướng dẫn chạy dự án
 Chạy bằng Live Server trên VS code
 - Mở file Readme.md trong VS code
 - Cài đặt extension **Live Server** trong VS code
 - Nhấp chuột phải vào file index.html và chọn **Open with live server** (hoặc bấm nút **Go live** ở góc dưới cùng bên phải)
 
-## 11. Thành viên + Phân công tuần đầu
+## 10. Thành viên + Phân công tuần đầu
 ### Nhóm Compiled
-| **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** |
+| **Tên thành viên** | **Mã sinh viên** | **Nhiệm vụ** | **Profile Github**
 | --- | --- | --- | 
-| Lê Minh Tiểu Phượng | 27A4043339 | File đề xuất dự án |
-| Phan Thị Tùng Giang | 27A4043287 | Readme bản đầu và phân công |
-| Vùi Vũ Hà Nhi | 27A4043333 | Mô tả dự án |
-| Nguyễn Bảo Anh | 27A4043266 | File đề xuất dự án |
+| Lê Minh Tiểu Phượng | 27A4043339 | File đề xuất dự án | TieuPhuong0405 |
+| Phan Thị Tùng Giang | 27A4043287 | Readme bản đầu và phân công | 
+| Vùi Vũ Hà Nhi | 27A4043333 | Mô tả dự án | hanhi120306-code |
+| Nguyễn Bảo Anh | 27A4043266 | File đề xuất dự án | baoanhnguyena1 |
 
