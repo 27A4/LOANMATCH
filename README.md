@@ -171,7 +171,7 @@ LOANMATCH/
 ```
 ## 9. Hướng dẫn chạy dự án
 Chạy bằng Live Server trên VS code
-- Mở file Readme.md trong VS code
+- Mở file trong VS code
 - Cài đặt extension **Live Server** trong VS code
 - Nhấp chuột phải vào file index.html và chọn **Open with live server** (hoặc bấm nút **Go live** ở góc dưới cùng bên phải).
 
