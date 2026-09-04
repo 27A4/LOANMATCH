@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính khoản vay - LoanMatch</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/calculator.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Loan<span>Match</span></a>
+      <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm vay</a>
+        <a class="active" href="calculator.html">Tính khoản vay</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container calculator-page">
+    <div class="page-title">
+      <p class="eyebrow">CÔNG CỤ HỖ TRỢ</p>
+      <h1>Tính khoản vay</h1>
+      <p>Nhập thông tin để ước tính khoản thanh toán hàng tháng.</p>
+    </div>
+
+    <section class="calculator-card">
+      <div class="form-grid">
+        <label>Số tiền muốn vay (VNĐ)
+          <input id="amount" type="number" value="100000000" min="0" step="1000000">
+        </label>
+        <label>Lãi suất (%/năm)
+          <input id="rate" type="number" value="8" min="0" step="0.1">
+        </label>
+        <label>Thời hạn vay (tháng)
+          <input id="months" type="number" value="24" min="1" step="1">
+        </label>
+      </div>
+      <button id="calculateBtn" class="btn btn-primary">Tính toán</button>
+
+      <div class="calc-result">
+        <div><span>Khoản trả hàng tháng</span><strong id="monthly">—</strong></div>
+        <div><span>Tổng tiền lãi</span><strong id="interest">—</strong></div>
+        <div><span>Tổng số tiền phải trả</span><strong id="total">—</strong></div>
+      </div>
+      <p class="note">* Kết quả chỉ mang tính tham khảo, không phải cam kết tín dụng của ngân hàng.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 LoanMatch · Website demo phục vụ học tập</div>
+  </footer>
+
+  <script src="../assets/js/calculator.js"></script>
+</body>
+</html>

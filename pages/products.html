@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm vay - LoanMatch</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/products.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Loan<span>Match</span></a>
+      <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a class="active" href="products.html">Sản phẩm vay</a>
+        <a href="calculator.html">Tính khoản vay</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container products-page">
+    <div class="page-title">
+      <p class="eyebrow">KHÁM PHÁ KHOẢN VAY</p>
+      <h1>Sản phẩm vay</h1>
+      <p>Chọn mục đích vay để xem các sản phẩm phù hợp.</p>
+    </div>
+
+    <div id="categoryTabs" class="category-tabs"></div>
+
+    <section>
+      <div class="result-heading">
+        <div>
+          <h2 id="categoryTitle">Tất cả sản phẩm</h2>
+          <p id="resultCount"></p>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 LoanMatch · Website demo phục vụ học tập</div>
+  </footer>
+
+  <script src="../assets/js/products.js"></script>
+</body>
+</html>

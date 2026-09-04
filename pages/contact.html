@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ - LoanMatch</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Loan<span>Match</span></a>
+      <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm vay</a>
+        <a href="calculator.html">Tính khoản vay</a>
+        <a href="about.html">Giới thiệu</a>
+        <a class="active" href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container simple-page">
+    <p class="eyebrow">LIÊN HỆ</p>
+    <h1>Liên hệ với LoanMatch</h1>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Đã gửi thông tin!');">
+      <label>Họ và tên<input type="text" required></label>
+      <label>Email<input type="email" required></label>
+      <label>Nội dung<textarea rows="6" required></textarea></label>
+      <button class="btn btn-primary" type="submit">Gửi liên hệ</button>
+    </form>
+  </main>
+  <footer class="footer"><div class="container">© 2026 LoanMatch · Website demo phục vụ học tập</div></footer>
+</body>
+</html>
