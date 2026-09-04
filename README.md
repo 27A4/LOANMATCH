@@ -105,10 +105,6 @@ Người dùng có thể gửi yêu cầu tư vấn thông qua biểu mẫu gồ
 - Khoản vay quan tâm
 - Số tiền dự kiến
 - Nội dung yêu cầu.
-JavaScript/jQuery được sử dụng để:
-- Kiểm tra dữ liệu nhập vào
-- Kiểm tra các trường bắt buộc
-- Hiển thị thông báo kết quả.
 
 ## 6. Dữ liệu khoản vay
 Website sử dụng khoảng **10–15 khoản vay giả lập** để phục vụ xây dựng và kiểm thử các chức năng.
