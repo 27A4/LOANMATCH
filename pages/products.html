@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm vay - LoanMatch</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/products.css">
+  <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Loan<span>Match</span></a>
+      <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a class="active" href="products.html">Sản phẩm vay</a>
+        <a href="calculator.html">Tính khoản vay</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ và tư vấn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container products-page">
+    <div class="page-title">
+      <p class="eyebrow">KHÁM PHÁ KHOẢN VAY</p>
+      <h1>Sản phẩm vay</h1>
+      <p>Chọn mục đích vay để xem các sản phẩm phù hợp.</p>
+    </div>
+
+    <div id="categoryTabs" class="category-tabs"></div>
+
+    <section>
+      <div class="result-heading">
+        <div>
+          <h2 id="categoryTitle">Tất cả sản phẩm</h2>
+          <p id="resultCount"></p>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <hr>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>LoanMatch</h3>
+      <p>Giải pháp so sánh và tư vấn khoản vay tối ưu, minh bạch cho người dùng.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Thông tin liên hệ</h3>
+      <p><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+      <p><strong>Hotline:</strong> 0123 456 789</p>
+      <p><strong>Email:</strong> support@loanmatch.com</p>
+    </div>
+    <div class="footer-col">
+      <h3>Liên kết nhanh</h3>
+      <ul>
+        <li><a href="../index.html">Trang chủ</a></li>
+        <li><a href="products.html">Sản phẩm vay</a></li>
+        <li><a href="calculator.html">Tính khoản vay</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p> LoanMatch · Website phục vụ nhu cầu tư vấn so sánh khoản vay</p>
+  </div>
+  </hr> 
+  </footer>
+<div class="floating-contact">
+  <a href="tel:0975993576" class="contact-icon phone" title="Gọi ngay">
+    📞
+  </a>
+  <a href="https://zalo.me/0123456789" target="_blank" class="contact-icon zalo" title="Chat Zalo">
+    Zalo
+  </a>
+  <a href="https://m.me/yourpage" target="_blank" class="contact-icon messenger" title="Messenger">
+    💬
+  </a>
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="contact-icon back-to-top" title="Lên đầu trang">
+    ▲
+  </button>   <!--onclick="window.scroollTo: thư viện trình duyệt dùng để di chuyển vị trí lên màn hình-->
+</div>
+  <script src="../assets/js/products.js"></script>
+</body>
+</html>
