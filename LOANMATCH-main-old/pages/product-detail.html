@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm - LoanMatch</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/product-detail.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Loan<span>Match</span></a>
+      <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a class="active" href="products.html">Sản phẩm vay</a>
+        <a href="calculator.html">Tính khoản vay</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container detail-page">
+    <a class="back-link" href="products.html">← Quay lại sản phẩm vay</a>
+
+    <section class="product-intro">
+      <p class="eyebrow" id="detailCategory">TIÊU DÙNG</p>
+      <h1 id="detailName">Vay tiêu dùng tín chấp</h1>
+      <p id="detailDescription">Gói vay cho mục đích tiêu dùng không cần tài sản bảo đảm.</p>
+    </section>
+
+    <section class="comparison-section">
+      <div class="section-heading">
+        <p class="eyebrow">SO SÁNH</p>
+        <h2>So sánh giữa các ngân hàng</h2>
+        <p>Đối chiếu các thông tin quan trọng trước khi lựa chọn.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th rowspan="2" class="bank-head">Ngân hàng</th>
+              <th colspan="3">Thông tin chung</th>
+              <th rowspan="2">Hồ sơ cần chuẩn bị</th>
+              <th rowspan="2">Quy trình</th>
+              <th rowspan="2">Ngày trả nợ</th>
+              <th rowspan="2">Biểu phí</th>
+            </tr>
+            <tr>
+              <th>Điều kiện</th>
+              <th>Số tiền vay tối đa</th>
+              <th>Thời hạn vay tối đa</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 LoanMatch · Website demo phục vụ học tập</div>
+  </footer>
+
+  <script src="../assets/js/product-detail.js"></script>
+</body>
+</html>

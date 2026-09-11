@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanMatch - Tính khoản vay</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/calculator.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav">
+            <div class="logo">
+                <a href="../index.html">Loan<span>Match</span></a>
+            </div>
+            <nav>
+                <a href="../index.html">Trang chủ</a>
+                <a href="products.html">Sản phẩm vay</a>
+                <a href="calculator.html" class="active">Tính khoản vay</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="contact.html">Liên hệ và tư vấn</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container calc-section">
+        <div class="calc-wrapper">
+            
+            <!-- Cột trái: Form chọn thông số -->
+            <div class="calc-card input-card">
+                
+                <!-- 1. Chọn Ngân hàng -->
+                <div class="input-field">
+                    <label for="bank-select">Ngân hàng</label>
+                    <div class="input-box">
+                        <select id="bank-select">
+                            <option value="">-- Chọn ngân hàng --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 2. Chọn Gói vay -->
+                <div class="input-field">
+                    <label for="package-select">Gói vay ưu đãi</label>
+                    <div class="input-box">
+                        <select id="package-select" disabled>
+                            <option value="">-- Chọn gói vay --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 3. Số tiền muốn vay -->
+                <div class="input-field">
+                    <label for="amount">Số tiền muốn vay</label>
+                    <div class="input-box">
+                        <input type="number" id="amount" placeholder="0" value="500000000" step="10000000">
+                        <span class="unit">VND</span>
+                    </div>
+                </div>
+
+                <!-- 4. Lãi suất (%/năm) -->
+                <div class="input-field">
+                    <label for="rate">Lãi suất cố định (%/năm)</label>
+                    <div class="input-box">
+                        <input type="number" id="rate" step="0.1" placeholder="0" value="7.5">
+                        <span class="unit">%/Năm</span>
+                    </div>
+                </div>
+
+                <!-- 5. Số tháng vay -->
+                <div class="input-field">
+                    <label for="months">Số tháng vay</label>
+                    <div class="input-box">
+                        <input type="number" id="months" placeholder="0" value="36" min="1" max="360">
+                        <span class="unit">Tháng</span>
+                    </div>
+                </div>
+
+                <!-- 6. Ngày giải ngân -->
+                <div class="input-field">
+                    <label for="disbursement-date">Ngày giải ngân</label>
+                    <div class="input-box">
+                        <input type="date" id="disbursement-date">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột phải: Kết quả theo mẫu Vietcombank -->
+            <div class="calc-card result-card">
+                <h3 class="result-title">Số tiền cần trả</h3>
+
+                <div class="result-list">
+                    <div class="result-row">
+                        <span class="label">Phương thức vay</span>
+                        <span class="value" id="method-val">Dư nợ giảm dần</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">Số tiền trả hàng tháng (kỳ 1)</span>
+                        <span class="value bold" id="monthly-pay">0 VND</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">Tổng số gốc phải trả</span>
+                        <span class="value bold" id="total-principal">0 VND</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="label">Tổng lãi phải trả</span>
+                        <span class="value bold" id="total-interest">0 VND</span>
+                    </div>
+                </div>
+
+                <div class="result-divider"></div>
+
+                <div class="result-row total-row">
+                    <span class="label">Tổng số tiền cần trả</span>
+                    <span class="value total-amount" id="total-payment">0 VND</span>
+                </div>
+
+                <p class="disclaimer">Lưu ý: Kết quả tính toán chỉ mang tính chất tham khảo</p>
+
+                <button type="button" class="btn-schedule" id="btn-schedule" disabled>Xem lịch trả nợ</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal Xem Lịch Trả Nợ -->
+    <div id="schedule-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3 style="color: #0f2e5a; margin-bottom: 15px;">Lịch trả nợ chi tiết hàng tháng</h3>
+            <div class="table-wrapper">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Kỳ</th>
+                            <th>Ngày trả</th>
+                            <th>Gốc trả (VND)</th>
+                            <th>Lãi trả (VND)</th>
+                            <th>Tổng trả (VND)</th>
+                            <th>Dư nợ còn lại (VND)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nhúng file JS chính xác từ thư mục assets -->
+    <script src="../assets/js/calculator.js"></script>
+</body>
+</html>
