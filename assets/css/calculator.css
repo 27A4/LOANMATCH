@@ -1,33 +1,270 @@
+/* Styling cho trang tính toán khoản vay (Mô phỏng Vietcombank) */
+:root {
+    --vcb-bg: #eef5ed;
+    --vcb-primary: #76b02a;
+    --vcb-primary-hover: #659a22;
+    --vcb-card-bg: #ffffff;
+    --vcb-text-dark: #222222;
+    --vcb-text-muted: #666666;
+    --vcb-border: #e2e8f0;
+}
 
-.calculator-page { padding-bottom: 100px; }
-.calculator-card {
-  max-width: 900px;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 35px;
+body {
+    background-color: var(--vcb-bg);
+    font-family: Arial, Roboto, sans-serif;
+    color: var(--vcb-text-dark);
 }
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-bottom: 24px;
-}
-.calc-result {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 30px;
-}
-.calc-result div {
-  padding: 20px;
-  background: #f5f7fa;
-  border-radius: 8px;
-}
-.calc-result span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 8px; }
-.calc-result strong { color: var(--primary); font-size: 20px; }
-.note { font-size: 12px; margin-bottom: 0; }
 
-@media (max-width: 700px) {
-  .form-grid, .calc-result { grid-template-columns: 1fr; }
+/* Layout container */
+.calc-section {
+    padding: 30px 15px;
+}
+
+.calc-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 850px) {
+    .calc-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Thẻ Card chung */
+.calc-card {
+    background: var(--vcb-card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Cột trái: Form nhập liệu --- */
+.input-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-field label {
+    font-size: 14px;
+    color: var(--vcb-text-muted);
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border: 1px solid var(--vcb-border);
+    border-radius: 8px;
+    padding: 0 14px;
+    height: 48px;
+    transition: border-color 0.2s;
+}
+
+.input-box:focus-within {
+    border-color: var(--vcb-primary);
+    background-color: #ffffff;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--vcb-text-dark);
+}
+
+.input-box select {
+    cursor: pointer;
+}
+
+.input-box .unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--vcb-text-muted);
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+/* --- Cột phải: Kết quả --- */
+.result-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--vcb-text-dark);
+    margin-bottom: 24px;
+}
+
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.result-row .label {
+    color: var(--vcb-text-muted);
+}
+
+.result-row .value {
+    color: var(--vcb-text-dark);
+    font-weight: 500;
+}
+
+.result-row .value.bold {
+    font-weight: 700;
+}
+
+.result-divider {
+    height: 1px;
+    background-color: var(--vcb-border);
+    margin: 20px 0;
+}
+
+.total-row .label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.total-row .total-amount {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.disclaimer {
+    font-size: 13px;
+    color: var(--vcb-text-muted);
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.btn-schedule {
+    width: 100%;
+    height: 48px;
+    background-color: #d1d5db;
+    color: #6b7280;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: not-allowed;
+    transition: all 0.2s;
+    margin-top: auto;
+}
+
+.btn-schedule.active {
+    background-color: var(--vcb-primary);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-schedule.active:hover {
+    background-color: var(--vcb-primary-hover);
+}
+
+/* --- Modal Lịch Trả Nợ --- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #0f2e5a;
+}
+
+.close-btn {
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: right;
+    font-size: 14px;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--vcb-border);
+}
+
+.schedule-table th {
+    background-color: #f1f5f9;
+    position: sticky;
+    top: 0;
+    color: #334155;
+}
+
+.schedule-table th:first-child,
+.schedule-table td:first-child,
+.schedule-table th:nth-child(2),
+.schedule-table td:nth-child(2) {
+    text-align: center;
 }

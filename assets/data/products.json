@@ -1,62 +1,82 @@
 [
   {
-    "id":"consumer-unsecured",
-    "category":"consumer",
-    "name":"Vay tiêu dùng tín chấp",
-    "description":"Gói vay cho mục đích tiêu dùng không cần tài sản bảo đảm."
+    "id": "consumer-unsecured",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "consumer",
+    "name": "Vay tiêu dùng tín chấp",
+    "description": "Gói vay cho mục đích tiêu dùng không cần tài sản bảo đảm.",
+    "interest_rate": 8.5
   },
   {
-    "id":"consumer-secured",
-    "category":"consumer",
-    "name":"Vay tiêu dùng có tài sản bảo đảm",
-    "description":"Khoản vay tiêu dùng có tài sản bảo đảm theo quy định của ngân hàng."
+    "id": "consumer-secured",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "consumer",
+    "name": "Vay tiêu dùng có tài sản bảo đảm",
+    "description": "Khoản vay tiêu dùng có tài sản bảo đảm theo quy định của ngân hàng.",
+    "interest_rate": 7.5
   },
   {
-    "id":"consumer-collateral",
-    "category":"consumer",
-    "name":"Vay tiêu dùng cầm cố giấy tờ có giá",
-    "description":"Khoản vay sử dụng giấy tờ có giá làm tài sản cầm cố."
+    "id": "consumer-collateral",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "consumer",
+    "name": "Vay tiêu dùng cầm cố giấy tờ có giá",
+    "description": "Khoản vay sử dụng giấy tờ có giá làm tài sản cầm cố.",
+    "interest_rate": 7.0
   },
   {
-    "id":"business-short",
-    "category":"business",
-    "name":"Vay sản xuất kinh doanh ngắn hạn",
-    "description":"Bổ sung vốn phục vụ hoạt động sản xuất, kinh doanh trong ngắn hạn."
+    "id": "business-short",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "business",
+    "name": "Vay sản xuất kinh doanh ngắn hạn",
+    "description": "Bổ sung vốn phục vụ hoạt động sản xuất, kinh doanh trong ngắn hạn.",
+    "interest_rate": 6.8
   },
   {
-    "id":"business-long",
-    "category":"business",
-    "name":"Vay sản xuất kinh doanh dài hạn",
-    "description":"Hỗ trợ nhu cầu vốn sản xuất kinh doanh trong thời gian dài hơn."
+    "id": "business-long",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "business",
+    "name": "Vay sản xuất kinh doanh dài hạn",
+    "description": "Hỗ trợ nhu cầu vốn sản xuất kinh doanh trong thời gian dài hơn.",
+    "interest_rate": 8.0
   },
   {
-    "id":"auto-loan",
-    "category":"auto",
-    "name":"Vay mua ô tô",
-    "description":"Khoản vay phục vụ nhu cầu mua ô tô của khách hàng cá nhân."
+    "id": "auto-loan",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "auto",
+    "name": "Vay mua ô tô",
+    "description": "Khoản vay phục vụ nhu cầu mua ô tô của khách hàng cá nhân.",
+    "interest_rate": 7.2
   },
   {
-    "id":"real-estate-young-home",
-    "category":"real-estate",
-    "name":"Vay mua nhà",
-    "description":"Khoản vay phục vụ nhu cầu mua nhà, căn hộ và bất động sản phù hợp."
+    "id": "real-estate-young-home",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "real-estate",
+    "name": "Vay mua nhà",
+    "description": "Khoản vay phục vụ nhu cầu mua nhà, căn hộ và bất động sản phù hợp.",
+    "interest_rate": 6.5
   },
   {
-    "id":"real-estate-land",
-    "category":"real-estate",
-    "name":"Vay mua đất",
-    "description":"Khoản vay phục vụ nhu cầu mua đất."
+    "id": "real-estate-land",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "real-estate",
+    "name": "Vay mua đất",
+    "description": "Khoản vay phục vụ nhu cầu mua đất.",
+    "interest_rate": 6.9
   },
   {
-    "id":"real-estate-construction",
-    "category":"real-estate",
-    "name":"Vay xây dựng, sửa chữa nhà",
-    "description":"Khoản vay phục vụ nhu cầu xây dựng hoặc sửa chữa nhà ở."
+    "id": "real-estate-construction",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "real-estate",
+    "name": "Vay xây dựng, sửa chữa nhà",
+    "description": "Khoản vay phục vụ nhu cầu xây dựng hoặc sửa chữa nhà ở.",
+    "interest_rate": 7.1
   },
   {
-    "id":"other",
-    "category":"other",
-    "name":"Khoản vay cho mục đích khác",
-    "description":"Các nhu cầu vay khác theo danh mục sản phẩm của ngân hàng."
+    "id": "other",
+    "bank_id": ["mb", "vietcombank", "vietinbank", "bidv"],
+    "category": "other",
+    "name": "Khoản vay cho mục đích khác",
+    "description": "Các nhu cầu vay khác theo danh mục sản phẩm của ngân hàng.",
+    "interest_rate": 8.2
   }
 ]
