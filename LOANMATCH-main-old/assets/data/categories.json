@@ -1,0 +1,8 @@
+[
+  {"id":"all","name":"Tất cả sản phẩm"},
+  {"id":"consumer","name":"Tiêu dùng"},
+  {"id":"auto","name":"Mua ô tô"},
+  {"id":"business","name":"SXKD"},
+  {"id":"real-estate","name":"BĐS"},
+  {"id":"other","name":"Khác"}
+]

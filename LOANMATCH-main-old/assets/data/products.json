@@ -1,0 +1,56 @@
+[
+  {
+    "id":"consumer-unsecured",
+    "category":"consumer",
+    "name":"Vay tiêu dùng tín chấp",
+    "description":"Gói vay cho mục đích tiêu dùng không cần tài sản bảo đảm."
+  },
+  {
+    "id":"consumer-secured",
+    "category":"consumer",
+    "name":"Vay tiêu dùng có tài sản bảo đảm",
+    "description":"Khoản vay tiêu dùng có tài sản bảo đảm theo quy định của ngân hàng."
+  },
+  {
+    "id":"consumer-collateral",
+    "category":"consumer",
+    "name":"Vay tiêu dùng cầm cố giấy tờ có giá",
+    "description":"Khoản vay sử dụng giấy tờ có giá làm tài sản cầm cố."
+  },
+  {
+    "id":"business-short",
+    "category":"business",
+    "name":"Vay sản xuất kinh doanh ngắn hạn",
+    "description":"Bổ sung vốn phục vụ hoạt động sản xuất, kinh doanh trong ngắn hạn."
+  },
+  {
+    "id":"business-long",
+    "category":"business",
+    "name":"Vay sản xuất kinh doanh dài hạn",
+    "description":"Hỗ trợ nhu cầu vốn sản xuất kinh doanh trong thời gian dài hơn."
+  },
+  {
+    "id":"auto-loan",
+    "category":"auto",
+    "name":"Vay mua ô tô",
+    "description":"Khoản vay phục vụ nhu cầu mua ô tô của khách hàng cá nhân."
+  },
+  {
+    "id":"real-estate-home",
+    "category":"real-estate",
+    "name":"Vay mua nhà",
+    "description":"Khoản vay phục vụ nhu cầu mua nhà, căn hộ và bất động sản phù hợp."
+  },
+  {
+    "id":"real-estate-construction",
+    "category":"real-estate",
+    "name":"Vay xây dựng, sửa chữa nhà",
+    "description":"Khoản vay phục vụ nhu cầu xây dựng hoặc sửa chữa nhà ở."
+  },
+  {
+    "id":"other",
+    "category":"other",
+    "name":"Khoản vay cho mục đích khác",
+    "description":"Các nhu cầu vay khác theo danh mục sản phẩm của ngân hàng."
+  }
+]
