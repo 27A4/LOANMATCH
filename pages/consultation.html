@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng ký tư vấn - LOANMATCH</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/consultation.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav">
+
+            <a class="brand" href="../index.html">
+                Loan<span>Match</span>
+            </a>
+
+            <nav>
+                <a href="../index.html">Trang chủ</a>
+
+                <a class="active" href="products.html">
+                    Sản phẩm vay
+                </a>
+
+                <a href="calculator.html">
+                    Tính khoản vay
+                </a>
+
+                <a href="about.html">
+                    Giới thiệu
+                </a>
+
+                <a href="contact.html">
+                    Liên hệ và tư vấn
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="container consultation-page">
+
+        <a class="back-link" href="javascript:history.back()">
+            ← Quay lại
+        </a>
+
+        <section class="consultation-card">
+
+            <p class="eyebrow">
+                ĐĂNG KÝ TƯ VẤN
+            </p>
+
+            <h1>
+                Đăng ký tư vấn khoản vay
+            </h1>
+
+            <p class="intro-text">
+                Vui lòng điền thông tin để nhận tư vấn về sản phẩm vay bạn quan tâm.
+            </p>
+
+
+            <form id="consultationForm">
+
+                <div class="form-group">
+                    <label for="bank">
+                        Ngân hàng
+                    </label>
+
+                    <input
+                        type="text"
+                        id="bank"
+                        name="bank"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="product">
+                        Sản phẩm vay
+                    </label>
+
+                    <input
+                        type="text"
+                        id="product"
+                        name="product"
+                        readonly
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="fullName">
+                        Họ và tên
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Nhập họ và tên"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">
+                        Số điện thoại
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Nhập số điện thoại"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Nhập email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">
+                        Nội dung cần tư vấn
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Nhập nội dung bạn muốn được tư vấn..."
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Đăng ký tư vấn
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>
+                LoanMatch · Website phục vụ nhu cầu tư vấn và so sánh khoản vay
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="../assets/js/consultation.js"></script>
+
+</body>
+</html>

@@ -62,10 +62,13 @@ function renderProducts(items) {
       <span class="tag">${getCategoryName(product.category)}</span>
       <h3>${product.name}</h3>
       <p>${product.description}</p>
-      <a class="view-link" href="product-detail.html?id=${product.id}">
-      <a class="view-link" href="product-detail1.html?id=${product.id}">
-        Xem thông tin & so sánh →
-      </a>
+     <a class="view-link" href="${
+    product.category === "real-estate"
+        ? `product-detail-bds.html?id=${product.id}`
+        : `product-detail.html?id=${product.id}`
+}">
+    Xem thông tin & so sánh →
+</a>
     </article>
   `).join("");
 }

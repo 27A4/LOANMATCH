@@ -72,6 +72,14 @@ async function init() {
       <td>${bank.process}</td>
       <td>${bank.repayment}</td>
       <td>${bank.fees}</td>
+      <td>
+      <a
+  class="consult-btn"
+  href="consultation.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
+>
+  Đăng ký tư vấn
+</a>
+</td>
     </tr>
   `).join("");
 }

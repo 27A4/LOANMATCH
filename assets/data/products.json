@@ -36,10 +36,16 @@
     "description":"Khoản vay phục vụ nhu cầu mua ô tô của khách hàng cá nhân."
   },
   {
-    "id":"real-estate-home",
+    "id":"real-estate-young-home",
     "category":"real-estate",
     "name":"Vay mua nhà",
     "description":"Khoản vay phục vụ nhu cầu mua nhà, căn hộ và bất động sản phù hợp."
+  },
+  {
+    "id":"real-estate-land",
+    "category":"real-estate",
+    "name":"Vay mua đất",
+    "description":"Khoản vay phục vụ nhu cầu mua đất."
   },
   {
     "id":"real-estate-construction",
