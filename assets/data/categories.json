@@ -2,7 +2,7 @@
   {"id":"all","name":"Tất cả sản phẩm"},
   {"id":"consumer","name":"Tiêu dùng"},
   {"id":"auto","name":"Mua ô tô"},
-  {"id":"business","name":"SẢN XUẤT KINH DOANH"},
-  {"id":"real-estate","name":"BĐS"},
+  {"id":"business","name":"Sản xuất kinh doanh"},
+  {"id":"real-estate","name":"Bất động sản"},
   {"id":"other","name":"Khác"}
 ]

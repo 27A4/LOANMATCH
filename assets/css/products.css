@@ -68,6 +68,42 @@
   font-size: 14px;
   font-weight: 800;
 }
+/* --- SUB-CATEGORY TABS (CHO MỤC KHÁC) --- */
+.sub-category-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 10px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-top: 0; /* Liền mạch với dải category-tabs phía trên */
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 10px;
+}
+
+.sub-tab-btn {
+  border: 1px solid var(--border);
+  background: white;
+  color: #596577;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sub-tab-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.sub-tab-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
 .empty { padding: 50px; background: white; border: 1px dashed var(--border); text-align: center; }
 
 @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }

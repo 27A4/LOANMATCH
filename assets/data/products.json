@@ -78,5 +78,41 @@
     "name": "Khoản vay cho mục đích khác",
     "description": "Các nhu cầu vay khác theo danh mục sản phẩm của ngân hàng.",
     "interest_rate": 8.2
+  },
+  {
+    "id": "other-refinancing",
+    "bank_id": ["vietcombank", "bidv"],
+    "category": "other",
+    "sub_category": "refinancing",
+    "name": "Vay tái cơ cấu / Chuyển khoản vay",
+    "description": "Chuyển khoản vay từ TCTD khác về để hưởng lãi suất ưu đãi và tối ưu dòng tiền.",
+    "interest_rate": 6.5
+  },
+  {
+    "id": "other-education",
+    "bank_id": ["bidv", "vietinbank"],
+    "category": "other",
+    "sub_category": "education",
+    "name": "Vay du học & Giáo dục",
+    "description": "Tài trợ học phí, chi phí sinh hoạt và chứng minh tài chính xin Visa du học.",
+    "interest_rate": 7.0
+  },
+  {
+    "id": "other-reimbursement",
+    "bank_id": ["bidv", "mb"],
+    "category": "other",
+    "sub_category": "reimbursement",
+    "name": "Vay bù đắp tài chính & Nộp thuế, phí",
+    "description": "Bù đắp chi phí tiền mặt đã chi trả hoặc nộp tiền sử dụng đất, lệ phí trước bạ.",
+    "interest_rate": 6.8
+  },
+  {
+    "id": "other-green-finance",
+    "bank_id": ["mb", "vietinbank"],
+    "category": "other",
+    "sub_category": "green_finance",
+    "name": "Vay năng lượng xanh / Điện mặt trời",
+    "description": "Tài trợ lắp đặt hệ thống điện mặt trời mái nhà cho tiêu dùng gia đình.",
+    "interest_rate": 6.9
   }
 ]

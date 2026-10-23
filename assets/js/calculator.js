@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const monthsInput = document.getElementById("months");
     const dateInput = document.getElementById("disbursement-date");
 
+    const methodEl = document.getElementById("loan-method");
+
     const monthlyPayEl = document.getElementById("monthly-pay");
     const totalPrincipalEl = document.getElementById("total-principal");
     const totalInterestEl = document.getElementById("total-interest");
@@ -41,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 bankSelect.appendChild(opt);
             });
 
-            // Tự động chọn Ngân hàng nếu được truyền từ URL
             if (paramBankId) {
                 bankSelect.value = String(paramBankId).trim();
                 loadPackages(paramBankId, paramProductId);
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 3. Tải danh sách Gói vay theo Ngân hàng (Hỗ trợ bank_id dạng Mảng và Chuỗi)
+    // 3. Tải danh sách Gói vay theo Ngân hàng
     function loadPackages(bankId, selectedProductId) {
         if (!packageSelect) return;
         packageSelect.innerHTML = '<option value="">-- Chọn gói vay --</option>';
@@ -70,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((products) => {
                 const targetBankId = String(bankId).trim().toLowerCase();
 
-                // Lọc sản phẩm hỗ trợ cả bank_id dạng Mảng [ "mb", "vcb" ] hoặc Chuỗi "mb"
                 const filtered = products.filter((p) => {
                     const rawBank = p.bank_id || p.bankId || p.bank || "";
                     if (Array.isArray(rawBank)) {
@@ -84,16 +84,25 @@ document.addEventListener("DOMContentLoaded", function () {
                         const opt = document.createElement("option");
                         opt.value = String(prod.id || prod.product_id).trim();
 
-                        const rate = prod.interest_rate || prod.interestRate || prod.rate || 0;
-                        opt.dataset.rate = rate;
-                        opt.textContent = `${prod.name} (${rate}%/năm)`;
+                        const rateBase = prod.interest_rate || prod.interestRate || prod.rate || 0;
+                        const rateShort = prod.interest_rate_short || rateBase;
+                        const rateLong = prod.interest_rate_long || rateBase;
+
+                        opt.dataset.rate = rateBase;
+                        opt.dataset.rateShort = rateShort;
+                        opt.dataset.rateLong = rateLong;
+
+                        if (rateShort !== rateLong) {
+                            opt.textContent = `${prod.name} (Ngắn hạn: ${rateShort}% | Dài hạn: ${rateLong}%)`;
+                        } else {
+                            opt.textContent = `${prod.name} (${rateBase}%/năm)`;
+                        }
 
                         packageSelect.appendChild(opt);
                     });
 
                     packageSelect.disabled = false;
 
-                    // Tự động chọn gói vay
                     if (selectedProductId) {
                         packageSelect.value = String(selectedProductId).trim();
                     }
@@ -109,12 +118,21 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch((err) => console.error("Lỗi đọc file products.json:", err));
     }
 
-    // Áp dụng Lãi suất của Gói vay vào ô nhập liệu
+    // 4. Áp dụng Lãi suất của Gói vay dựa theo Số tháng vay (Ngắn hạn vs Dài hạn)
     function applySelectedPackage() {
         if (!packageSelect || packageSelect.selectedIndex < 0) return;
         const selectedOpt = packageSelect.options[packageSelect.selectedIndex];
-        if (selectedOpt && selectedOpt.dataset.rate && rateInput) {
-            rateInput.value = selectedOpt.dataset.rate;
+
+        if (selectedOpt && rateInput) {
+            const months = parseInt(monthsInput ? monthsInput.value : 0) || 0;
+            const rateShort = parseFloat(selectedOpt.dataset.rateShort) || parseFloat(selectedOpt.dataset.rate) || 0;
+            const rateLong = parseFloat(selectedOpt.dataset.rateLong) || rateShort;
+
+            if (months > 12) {
+                rateInput.value = rateLong;
+            } else {
+                rateInput.value = rateShort;
+            }
             calculateLoan();
         }
     }
@@ -123,19 +141,61 @@ document.addEventListener("DOMContentLoaded", function () {
         packageSelect.addEventListener("change", applySelectedPackage);
     }
 
-    // 4. Xử lý tính toán Khoản vay
+    // 5. Xử lý chuẩn xác nhập Số tiền vay (Không còn bị lặp chuỗi Unikey/EVKey)
     if (amountInput) {
+        let isComposing = false;
+
+        amountInput.addEventListener("compositionstart", function () {
+            isComposing = true;
+        });
+
+        amountInput.addEventListener("compositionend", function () {
+            isComposing = false;
+            formatCurrencyInput(this);
+        });
+
         amountInput.addEventListener("input", function () {
-            let value = this.value.replace(/\D/g, "");
-            this.value = value ? Number(value).toLocaleString("en-US") : "";
+            if (!isComposing) {
+                formatCurrencyInput(this);
+            }
+        });
+    }
+
+    function formatCurrencyInput(inputEl) {
+        let cursorPosition = inputEl.selectionStart;
+        let originalLength = inputEl.value.length;
+
+        // Xóa sạch tất cả các ký tự không phải là chữ số
+        let rawValue = inputEl.value.replace(/\D/g, "");
+
+        if (rawValue) {
+            // Định dạng phân cách hàng nghìn bằng dấu phẩy
+            let formattedValue = Number(rawValue).toLocaleString("en-US");
+            inputEl.value = formattedValue;
+
+            // Giữ vị trí con trỏ chuột đúng vị trí đang gõ
+            let newLength = formattedValue.length;
+            cursorPosition = cursorPosition + (newLength - originalLength);
+            inputEl.setSelectionRange(cursorPosition, cursorPosition);
+        } else {
+            inputEl.value = "";
+        }
+
+        calculateLoan();
+    }
+
+    if (monthsInput) {
+        monthsInput.addEventListener("input", function () {
+            applySelectedPackage();
             calculateLoan();
         });
     }
 
-    [rateInput, monthsInput, dateInput].forEach((el) => {
+    [rateInput, dateInput].forEach((el) => {
         if (el) el.addEventListener("input", calculateLoan);
     });
 
+    // 6. Xử lý tính toán Khoản vay & Cập nhật Phương thức vay
     function calculateLoan() {
         if (!amountInput || !rateInput || !monthsInput) return;
 
@@ -143,6 +203,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const annualRate = parseFloat(rateInput.value) || 0;
         const months = parseInt(monthsInput.value) || 0;
         const startDateVal = dateInput ? dateInput.value : "";
+
+        // Cập nhật Phương thức vay tự động (Vay ngắn hạn vs Vay dài hạn)
+        if (methodEl) {
+            if (months > 0) {
+                methodEl.textContent = months <= 12 ? "Vay ngắn hạn" : "Vay dài hạn";
+            } else {
+                methodEl.textContent = "--";
+            }
+        }
 
         if (amount <= 0 || annualRate <= 0 || months <= 0) {
             resetResults();
@@ -198,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (totalPrincipalEl) totalPrincipalEl.textContent = "0 VND";
         if (totalInterestEl) totalInterestEl.textContent = "0 VND";
         if (totalPaymentEl) totalPaymentEl.textContent = "0 VND";
+        if (methodEl) methodEl.textContent = "--";
         if (btnSchedule) {
             btnSchedule.classList.remove("active");
             btnSchedule.disabled = true;
@@ -205,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scheduleData = [];
     }
 
-    // 5. Hiển thị Modal Lịch trả nợ
+    // 7. Hiển thị Modal Lịch trả nợ
     if (btnSchedule) {
         btnSchedule.addEventListener("click", function () {
             if (scheduleData.length === 0 || !scheduleBody) return;

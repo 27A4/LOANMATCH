@@ -1,8 +1,8 @@
-/* Styling cho trang tính toán khoản vay (Mô phỏng Vietcombank) */
+/* Styling cho trang tính toán khoản vay  */
 :root {
     --vcb-bg: #eef5ed;
-    --vcb-primary: #76b02a;
-    --vcb-primary-hover: #659a22;
+    --vcb-primary: #31678e;
+    --vcb-primary-hover: #5284ad;
     --vcb-card-bg: #ffffff;
     --vcb-text-dark: #222222;
     --vcb-text-muted: #666666;
