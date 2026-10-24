@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thẩm định giả định - LoanMatch</title>
+  <link rel="stylesheet" href="../assets/css/Chung.css">
+  <link rel="stylesheet" href="../assets/css/Thẩm định giả định.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">Loan<span>Match</span></a>
+      <nav>
+        <a href="../index.html">Trang chủ</a>
+        <a href="products/Tất cả/Tất cả sản phẩm.html">Sản phẩm vay</a>
+        <a href="Tính khoản vay.html">Tính khoản vay</a>
+        <a class="active" href="Thẩm định giả định.html">Thẩm định giả định</a>
+        <a href="Về chúng tôi.html">Về chúng tôi</a>
+        <a href="Liên hệ.html">Liên hệ và tư vấn</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container assessment-page">
+    <section class="assessment-card">
+      <p class="eyebrow">CÔNG CỤ THAM KHẢO</p>
+      <h1>Thẩm định giả định</h1>
+      <p>Ước tính tỷ lệ nghĩa vụ trả nợ hàng tháng so với thu nhập của bạn.</p>
+
+      <form id="assessmentForm">
+        <label for="monthlyIncome">Thu nhập hàng tháng (VND)</label>
+        <input id="monthlyIncome" name="monthlyIncome" type="number" min="1" step="1" required>
+
+        <label for="existingPayments">Khoản trả nợ hàng tháng hiện tại (VND)</label>
+        <input id="existingPayments" name="existingPayments" type="number" min="0" step="1" value="0" required>
+
+        <label for="proposedPayment">Khoản trả nợ dự kiến hàng tháng (VND)</label>
+        <input id="proposedPayment" name="proposedPayment" type="number" min="0" step="1" required>
+
+        <button class="btn btn-primary" type="submit">Xem kết quả giả định</button>
+      </form>
+
+      <p id="assessmentResult" class="assessment-result" aria-live="polite"></p>
+      <p class="assessment-note">Kết quả chỉ mang tính tham khảo, không phải quyết định cấp tín dụng. Ngân hàng sẽ thẩm định dựa trên hồ sơ và chính sách thực tế.</p>
+    </section>
+  </main>
+
+  <script>
+    const assessmentForm = document.getElementById("assessmentForm");
+    const assessmentResult = document.getElementById("assessmentResult");
+
+    assessmentForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const formData = new FormData(assessmentForm);
+      const income = Number(formData.get("monthlyIncome"));
+      const existingPayments = Number(formData.get("existingPayments"));
+      const proposedPayment = Number(formData.get("proposedPayment"));
+      const ratio = ((existingPayments + proposedPayment) / income) * 100;
+
+      assessmentResult.textContent = `Tổng khoản trả nợ dự kiến chiếm ${ratio.toLocaleString("vi-VN", { maximumFractionDigits: 1 })}% thu nhập hàng tháng.`;
+    });
+  </script>
+</body>
+</html>

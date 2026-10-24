@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 2. Tải danh sách Ngân hàng
-    fetch("../assets/data/banks.json")
+    fetch("../assets/data/Ngân hàng.json")
         .then((res) => res.json())
         .then((banks) => {
             if (!bankSelect) return;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 loadPackages(paramBankId, paramProductId);
             }
         })
-        .catch((err) => console.error("Lỗi đọc file banks.json:", err));
+        .catch((err) => console.error("Lỗi đọc file Ngân hàng.json:", err));
 
     if (bankSelect) {
         bankSelect.addEventListener("change", function () {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        fetch("../assets/data/products.json")
+        fetch("../assets/data/Sản phẩm.json")
             .then((res) => res.json())
             .then((products) => {
                 const targetBankId = String(bankId).trim().toLowerCase();
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     packageSelect.appendChild(opt);
                 }
             })
-            .catch((err) => console.error("Lỗi đọc file products.json:", err));
+            .catch((err) => console.error("Lỗi đọc file Sản phẩm.json:", err));
     }
 
     // 4. Áp dụng Lãi suất của Gói vay dựa theo Số tháng vay (Ngắn hạn vs Dài hạn)

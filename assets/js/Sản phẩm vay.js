@@ -20,17 +20,17 @@ const subCategories = [
 
 async function init() {
   try {
-    // 1. Nạp file danh mục categories.json
-    const catRes = await fetch("../assets/data/categories.json");
+    // 1. Nạp file danh mục
+    const catRes = await fetch("../../../assets/data/Danh mục.json");
     if (!catRes.ok) {
-      throw new Error(`Không tìm thấy file categories.json (Mã lỗi: ${catRes.status})`);
+      throw new Error(`Không tìm thấy file Danh mục.json (Mã lỗi: ${catRes.status})`);
     }
     categories = await catRes.json();
 
-    // 2. Nạp file sản phẩm products.json
-    const productRes = await fetch("../assets/data/products.json");
+    // 2. Nạp file sản phẩm
+    const productRes = await fetch("../../../assets/data/Sản phẩm.json");
     if (!productRes.ok) {
-      throw new Error(`Không tìm thấy file products.json (Mã lỗi: ${productRes.status})`);
+      throw new Error(`Không tìm thấy file Sản phẩm.json (Mã lỗi: ${productRes.status})`);
     }
     products = await productRes.json();
 
@@ -157,10 +157,14 @@ function renderProducts(items) {
 
   productGrid.innerHTML = items.map(product => {
     const detailUrl = product.category === "real-estate"
-      ? `product-detail-bds.html?id=${product.id}`
+      ? `../Bất động sản/Chi tiết bất động sản.html?id=${product.id}`
       : product.category === "car" || product.category === "auto"
-      ? `product-detail-car.html?id=${product.id}`
-      : `product-detail.html?id=${product.id}`;
+      ? `../Ô tô/Mua ô tô.html?id=${product.id}`
+      : product.category === "business"
+      ? `../Sản xuất kinh doanh/${product.id === "business-long" ? "Vay kinh doanh dài hạn" : "Vay kinh doanh ngắn hạn"}.html?id=${product.id}`
+      : product.id === "consumer-secured"
+      ? `../Tiêu dùng/Vay tiêu dùng có tài sản bảo đảm.html`
+      : `../Tiêu dùng/Vay tiêu dùng tín chấp.html?id=${product.id}`;
 
     const tagLabel = getCategoryName(product.category, product.sub_category);
 

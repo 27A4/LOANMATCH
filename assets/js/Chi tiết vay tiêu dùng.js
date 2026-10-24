@@ -56,7 +56,13 @@ const comparisonData = {
 
 async function init() {
   const id = new URLSearchParams(location.search).get("id") || "consumer-unsecured";
-  const data = comparisonData[id] || comparisonData["consumer-unsecured"];
+  const data = id === "consumer-secured"
+    ? {
+        ...comparisonData["consumer-unsecured"],
+        name: "Vay tiêu dùng có tài sản bảo đảm",
+        description: "Khoản vay tiêu dùng có tài sản bảo đảm theo quy định của ngân hàng."
+      }
+    : comparisonData[id] || comparisonData["consumer-unsecured"];
 
   detailCategory.textContent = data.category;
   detailName.textContent = data.name;
@@ -75,7 +81,7 @@ async function init() {
       <td>
       <a
   class="consult-btn"
-  href="consultation.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
+  href="../../Đăng ký tư vấn.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
 >
   Đăng ký tư vấn
 </a>

@@ -322,7 +322,7 @@ body.innerHTML = data.banks.map(bank => `
       <td>
         <a
           class="consult-btn"
-          href="consultation.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
+          href="../../Đăng ký tư vấn.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
         >
           Đăng ký tư vấn
         </a>

@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <td style="padding: 12px; font-size: 13px;">${bank.repayment}</td>
           <td style="padding: 12px; font-size: 13px;">${bank.fees}</td>
           <td style="padding: 12px; text-align: center;">
-            <a href="contact.html?bank=${encodeURIComponent(bank.name)}&product=car" 
+            <a href="../../Liên hệ.html?bank=${encodeURIComponent(bank.name)}&product=car"
                style="background-color: #0d47a1; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block;">
               Đăng ký tư vấn
             </a>

@@ -1,0 +1,53 @@
+.assessment-page {
+  max-width: 720px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.assessment-card {
+  padding: 32px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+}
+
+.assessment-card h1 {
+  margin: 0 0 12px;
+}
+
+.assessment-card form {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.assessment-card input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.assessment-card button {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+.assessment-result {
+  min-height: 24px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.assessment-note {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .assessment-card {
+    padding: 22px;
+  }
+}
