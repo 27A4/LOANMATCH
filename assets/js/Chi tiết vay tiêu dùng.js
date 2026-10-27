@@ -51,6 +51,53 @@ const comparisonData = {
         fees:"Theo biểu phí hiện hành."
       }
     ]
+  },
+  "consumer-collateral": {
+    category: "TIÊU DÙNG",
+    name: "Vay tiêu dùng cầm cố giấy tờ có giá",
+    description: "Khoản vay sử dụng giấy tờ có giá làm tài sản cầm cố. Điều kiện cụ thể cần xác nhận với từng ngân hàng.",
+    banks: [
+      {
+        name: "MB",
+        condition: "Tùy loại giấy tờ có giá, chủ sở hữu và chính sách của ngân hàng.",
+        maxAmount: "Theo giá trị giấy tờ có giá và tỷ lệ ngân hàng chấp nhận.",
+        maxTerm: "Theo thời hạn khoản vay và chính sách ngân hàng.",
+        documents: "CCCD, giấy tờ có giá và hồ sơ liên quan theo yêu cầu ngân hàng.",
+        process: "Nộp hồ sơ → thẩm định giấy tờ có giá → phê duyệt → ký hồ sơ → giải ngân.",
+        repayment: "Theo lịch trả nợ ghi trong hợp đồng.",
+        fees: "Xác nhận biểu phí và điều kiện áp dụng với ngân hàng."
+      },
+      {
+        name: "Vietcombank",
+        condition: "Tùy loại giấy tờ có giá, chủ sở hữu và chính sách của ngân hàng.",
+        maxAmount: "Theo giá trị giấy tờ có giá và tỷ lệ ngân hàng chấp nhận.",
+        maxTerm: "Theo thời hạn khoản vay và chính sách ngân hàng.",
+        documents: "CCCD, giấy tờ có giá và hồ sơ liên quan theo yêu cầu ngân hàng.",
+        process: "Nộp hồ sơ → thẩm định giấy tờ có giá → phê duyệt → ký hồ sơ → giải ngân.",
+        repayment: "Theo lịch trả nợ ghi trong hợp đồng.",
+        fees: "Xác nhận biểu phí và điều kiện áp dụng với ngân hàng."
+      },
+      {
+        name: "VietinBank",
+        condition: "Tùy loại giấy tờ có giá, chủ sở hữu và chính sách của ngân hàng.",
+        maxAmount: "Theo giá trị giấy tờ có giá và tỷ lệ ngân hàng chấp nhận.",
+        maxTerm: "Theo thời hạn khoản vay và chính sách ngân hàng.",
+        documents: "CCCD, giấy tờ có giá và hồ sơ liên quan theo yêu cầu ngân hàng.",
+        process: "Nộp hồ sơ → thẩm định giấy tờ có giá → phê duyệt → ký hồ sơ → giải ngân.",
+        repayment: "Theo lịch trả nợ ghi trong hợp đồng.",
+        fees: "Xác nhận biểu phí và điều kiện áp dụng với ngân hàng."
+      },
+      {
+        name: "BIDV",
+        condition: "Tùy loại giấy tờ có giá, chủ sở hữu và chính sách của ngân hàng.",
+        maxAmount: "Theo giá trị giấy tờ có giá và tỷ lệ ngân hàng chấp nhận.",
+        maxTerm: "Theo thời hạn khoản vay và chính sách ngân hàng.",
+        documents: "CCCD, giấy tờ có giá và hồ sơ liên quan theo yêu cầu ngân hàng.",
+        process: "Nộp hồ sơ → thẩm định giấy tờ có giá → phê duyệt → ký hồ sơ → giải ngân.",
+        repayment: "Theo lịch trả nợ ghi trong hợp đồng.",
+        fees: "Xác nhận biểu phí và điều kiện áp dụng với ngân hàng."
+      }
+    ]
   }
 };
 

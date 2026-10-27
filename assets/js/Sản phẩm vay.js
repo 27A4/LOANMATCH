@@ -162,6 +162,8 @@ function renderProducts(items) {
       ? `../Ô tô/Mua ô tô.html?id=${product.id}`
       : product.category === "business"
       ? `../Sản xuất kinh doanh/${product.id === "business-long" ? "Vay kinh doanh dài hạn" : "Vay kinh doanh ngắn hạn"}.html?id=${product.id}`
+      : product.id === "consumer-collateral"
+      ? `../Tiêu dùng/Cầm cố giấy tờ có giá.html?id=${product.id}`
       : product.id === "consumer-secured"
       ? `../Tiêu dùng/Vay tiêu dùng có tài sản bảo đảm.html`
       : `../Tiêu dùng/Vay tiêu dùng tín chấp.html?id=${product.id}`;
