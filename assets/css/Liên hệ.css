@@ -86,14 +86,14 @@
   gap: 8px;
 }
 
-/* Styling cho Footer */
-.site-footer {
-  background-color: #163666; /* Màu xanh thẫm giống giao diện hiện tại */
-  color: #ffffff;
-  padding: 40px 0 20px 0;
-  font-family: Arial, sans-serif;
-}
+  
+/* Styling cho Footer 40px 0 20px */
 
+.site-footer {
+  background-color: #132847; /* Màu xanh thẫm giống giao diện hiện tại */
+  color: #ffffff;
+  padding: 25px 0 20px 0;
+  }
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -103,20 +103,16 @@
   padding: 0 20px;
   gap: 30px;
 }
-
 .footer-col {
   flex: 1;
   min-width: 250px;
 }
-
 .footer-logo {
   font-size: 24px;
   margin-bottom: 15px;
 }
-
 .footer-logo span {
-  color: #ffb703; /* Màu cam/vàng tạo điểm nhấn cho logo */
-}
+  color: #ffb703; }*/ /* Màu cam/vàng tạo điểm nhấn cho logo */
 
 .footer-col h4 {
   font-size: 18px;
@@ -127,7 +123,7 @@
 }
 
 .footer-col p, .footer-col li {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
   color: #e0e0e0;
 }
@@ -152,7 +148,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 30px;
   padding-top: 15px;
-  font-size: 13px;
+  font-size: 17px;
   color: #a0a0a0;
 }
 
@@ -188,7 +184,15 @@
 }
 
 /* Màu sắc từng icon */
-.phone { background-color: #ff0000; }
-.zalo { background-color: #0088ff; }
+.phone { background-color: #e46e6e; }
+.zalo { background-color: #498ecb; }
 .messenger { background-color: #0084ff; }
-.back-to-top { background-color: #2b939e; }
+.back-to-top { background-color: #21848f; }
+
+/*hien thi tren dth */
+@media (max-width: 1000px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .category-grid, .intro-strip { grid-template-columns: 1fr; }
+}

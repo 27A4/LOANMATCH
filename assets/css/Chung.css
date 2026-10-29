@@ -88,8 +88,8 @@ p { color: var(--muted); }
   margin-top: 60px;
   padding: 25px 0;
   background: #122a4c;
-  color: white;
-  font-size: 13px;
+  color: #ffffff;
+  font-size: 17px;
 }
 
 .contact-form {

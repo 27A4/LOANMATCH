@@ -1,7 +1,7 @@
 
 .hero {
-  background: linear-gradient(110deg, #eef3fa 0%, #ffffff 65%);
-  border-bottom: 1px solid #e2e7ef;
+  background: linear-gradient(110deg, #dee1e4 0%, #ffffff 65%);
+  border-bottom: 1px solid #1c355f;
 }
 .hero-inner {
   min-height: 500px;
