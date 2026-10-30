@@ -62,7 +62,13 @@ const comparisonData = {
     • Tiền gốc: Trả hàng tháng hoặc hàng quý.<br>
     • Lãi vay: Trả hàng tháng theo dư nợ giảm dần.
   `,
-        fees: "Phương án sử dụng vốn: Theo mẫu biểu/biểu mẫu của Vietcombank."
+        fees: `
+  • Phí trả nợ trước hạn: <br>
+  • Năm 1–3: 1% số tiền trả trước hạn.<br>
+  • Năm 4–5: 0,5% số tiền trả trước hạn đối với khoản vay dài hạn.<br>
+  • Từ năm thứ 6: Miễn phí theo biểu phí được tham chiếu.<br>
+  • Phí tối thiểu tham khảo: 100.000 đồng.<br>
+  • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế."
       },
       {
         name: "VietinBank",
@@ -80,7 +86,13 @@ const comparisonData = {
         `,
         process: "Chuẩn bị hồ sơ → Nộp hồ sơ → Thẩm định → Phê duyệt → Ký hồ sơ → Giải ngân.",
         repayment: "Theo lịch trả nợ trên hợp đồng; gốc/lãi tuỳ phương thức khoản vay.",
-        fees: "Theo biểu phí Vietinbank và thoả thuận trong hợp đồng."    
+        fees: `
+    • Lãi suất vay: Theo chương trình tại thời điểm đăng ký và hợp đồng tín dụng.<br>
+    • Lãi suất tham chiếu trung, dài hạn được nguồn tổng hợp ghi nhận ở mức 6,3%/năm từ 08/04/2026; đây không mặc nhiên là lãi suất vay mua nhà áp dụng cho khách hàng.<br>
+    • Phí trả nợ trước hạn: Theo biểu phí VietinBank tại từng thời kỳ và điều khoản hợp đồng.<br>
+    • Phí định giá tài sản, công chứng, đăng ký giao dịch bảo đảm và các chi phí liên quan: Xác nhận theo hồ sơ thực tế.<br>
+    • Mức phí và lãi suất chính thức cần được ngân hàng xác nhận trước khi ký hợp đồng.
+  `
       },
       {
         name: "BIDV",
@@ -158,7 +170,14 @@ const comparisonData = {
     • Tiền gốc: Trả hàng tháng hoặc hàng quý;<br>
     • Lãi vay: Trả hàng tháng theo dư nợ giảm dần.
   `,
-        fees: "Phương án sử dụng vốn: Theo mẫu biểu/biểu mẫu của Vietcombank."
+        fees: `
+  • Phí trả nợ trước hạn: <br>
+  • Năm 1–3: 1% số tiền trả trước hạn.<br>
+  • Năm 4–5: 0,5% số tiền trả trước hạn đối với khoản vay dài hạn.<br>
+  • Từ năm thứ 6: Miễn phí theo biểu phí được tham chiếu.<br>
+  • Phí tối thiểu tham khảo: 100.000 đồng.<br>
+  • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế.
+`"
       },
        {
         name: "VietinBank",
@@ -181,7 +200,13 @@ const comparisonData = {
         `,
         process: "Chuẩn bị hồ sơ → Nộp hồ sơ → Thẩm định → Phê duyệt → Ký hồ sơ → Giải ngân.",
         repayment: "Theo lịch trả nợ trên hợp đồng.",
-        fees: "Theo biểu phí Vietinbank và thoả thuận trong hợp đồng."    
+        fees: `
+    • Lãi suất vay: Theo chương trình tại thời điểm đăng ký và hợp đồng tín dụng.<br>
+    • Lãi suất tham chiếu trung, dài hạn được nguồn tổng hợp ghi nhận ở mức 6,3%/năm từ 08/04/2026; đây không mặc nhiên là lãi suất vay mua nhà áp dụng cho khách hàng.<br>
+    • Phí trả nợ trước hạn: Theo biểu phí VietinBank tại từng thời kỳ và điều khoản hợp đồng.<br>
+    • Phí định giá tài sản, công chứng, đăng ký giao dịch bảo đảm và các chi phí liên quan: Xác nhận theo hồ sơ thực tế.<br>
+    • Mức phí và lãi suất chính thức cần được ngân hàng xác nhận trước khi ký hợp đồng.
+  `"    
       },
        {
         name: "BIDV",
@@ -253,7 +278,14 @@ const comparisonData = {
      • Tiền gốc vay: Trả hàng tháng hoặc hàng quý. <br>
      • Lãi vay: Trả hàng tháng theo dư nợ giảm dần.
      `,
-        fees: "Theo biểu phí của Vietcombank."
+        fees: `
+  • Phí trả nợ trước hạn: <br>
+  • Năm 1–3: 1% số tiền trả trước hạn.<br>
+  • Năm 4–5: 0,5% số tiền trả trước hạn đối với khoản vay dài hạn.<br>
+  • Từ năm thứ 6: Miễn phí theo biểu phí được tham chiếu.<br>
+  • Phí tối thiểu tham khảo: 100.000 đồng.<br>
+  • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế.
+`"
       },
  {
         name: "VietinBank",
@@ -276,7 +308,13 @@ const comparisonData = {
         `,
         process: "Chuẩn bị hồ sơ → Nộp hồ sơ → Thẩm định → Phê duyệt → Ký hồ sơ → Giải ngân.",
         repayment: "Theo lịch trả nợ trên hợp đồng.",
-        fees: "Theo biểu phí Vietinbank và thoả thuận trong hợp đồng."    
+        fees: `
+    • Lãi suất vay: Theo chương trình tại thời điểm đăng ký và hợp đồng tín dụng.<br>
+    • Lãi suất tham chiếu trung, dài hạn được nguồn tổng hợp ghi nhận ở mức 6,3%/năm từ 08/04/2026; đây không mặc nhiên là lãi suất vay mua nhà áp dụng cho khách hàng.<br>
+    • Phí trả nợ trước hạn: Theo biểu phí VietinBank tại từng thời kỳ và điều khoản hợp đồng.<br>
+    • Phí định giá tài sản, công chứng, đăng ký giao dịch bảo đảm và các chi phí liên quan: Xác nhận theo hồ sơ thực tế.<br>
+    • Mức phí và lãi suất chính thức cần được ngân hàng xác nhận trước khi ký hợp đồng.
+  `"    
       },
       {
         name: "BIDV",
