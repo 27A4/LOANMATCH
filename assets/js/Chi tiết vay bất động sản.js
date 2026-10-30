@@ -68,7 +68,8 @@ const comparisonData = {
   • Năm 4–5: 0,5% số tiền trả trước hạn đối với khoản vay dài hạn.<br>
   • Từ năm thứ 6: Miễn phí theo biểu phí được tham chiếu.<br>
   • Phí tối thiểu tham khảo: 100.000 đồng.<br>
-  • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế."
+  • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế.
+  `
       },
       {
         name: "VietinBank",
@@ -177,7 +178,7 @@ const comparisonData = {
   • Từ năm thứ 6: Miễn phí theo biểu phí được tham chiếu.<br>
   • Phí tối thiểu tham khảo: 100.000 đồng.<br>
   • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế.
-`"
+`
       },
        {
         name: "VietinBank",
@@ -206,7 +207,7 @@ const comparisonData = {
     • Phí trả nợ trước hạn: Theo biểu phí VietinBank tại từng thời kỳ và điều khoản hợp đồng.<br>
     • Phí định giá tài sản, công chứng, đăng ký giao dịch bảo đảm và các chi phí liên quan: Xác nhận theo hồ sơ thực tế.<br>
     • Mức phí và lãi suất chính thức cần được ngân hàng xác nhận trước khi ký hợp đồng.
-  `"    
+  `
       },
        {
         name: "BIDV",
@@ -285,7 +286,7 @@ const comparisonData = {
   • Từ năm thứ 6: Miễn phí theo biểu phí được tham chiếu.<br>
   • Phí tối thiểu tham khảo: 100.000 đồng.<br>
   • Lãi suất và các khoản phí khác: Theo biểu phí, chính sách và hợp đồng vay thực tế.
-`"
+`
       },
  {
         name: "VietinBank",
@@ -314,7 +315,7 @@ const comparisonData = {
     • Phí trả nợ trước hạn: Theo biểu phí VietinBank tại từng thời kỳ và điều khoản hợp đồng.<br>
     • Phí định giá tài sản, công chứng, đăng ký giao dịch bảo đảm và các chi phí liên quan: Xác nhận theo hồ sơ thực tế.<br>
     • Mức phí và lãi suất chính thức cần được ngân hàng xác nhận trước khi ký hợp đồng.
-  `"    
+  `
       },
       {
         name: "BIDV",
@@ -359,14 +360,16 @@ body.innerHTML = data.banks.map(bank => `
 
       <td>
         <a
-          class="consult-btn"
-          href="../../Đăng ký tư vấn.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
-        >
-          Đăng ký tư vấn
-        </a>
-      </td>
+        class="consult-btn"
+        href="../../Liên hệ.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
+        style="background-color: #173d7a; color: #fff; padding: 10px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block; white-space: nowrap;"
+    >
+        Đăng ký tư vấn
+    </a>
+    </td>
     </tr>
   `).join("");
 }
 
 init();
+
