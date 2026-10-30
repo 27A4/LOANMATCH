@@ -81,7 +81,7 @@ async function init() {
        style="background-color: #173d7a; color: #fff; padding: 10px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block; white-space: nowrap;">
         Đăng ký tư vấn
     </a>
-    </td>
+</td>
     </tr>
   `).join("");
 }

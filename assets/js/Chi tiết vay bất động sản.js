@@ -357,16 +357,15 @@ body.innerHTML = data.banks.map(bank => `
       <td>${bank.process}</td>
       <td>${bank.repayment}</td>
       <td>${bank.fees}</td>
-
-      <td>
-        <a
+      <td style="padding: 12px; text-align: center;">
+    <a
         class="consult-btn"
         href="../../Liên hệ.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
         style="background-color: #173d7a; color: #fff; padding: 10px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block; white-space: nowrap;"
     >
         Đăng ký tư vấn
     </a>
-    </td>
+</td>
     </tr>
   `).join("");
 }

@@ -77,11 +77,11 @@ async function init() {
       <td>${bank.repayment}</td>
       <td>${bank.fees}</td>
       <td style="padding: 12px; text-align: center;">
-            <a href="../../Liên hệ.html?bank=${encodeURIComponent(bank.name)}&product=car"
-               style="background-color: #0d47a1; color: #fff; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block;">
-              Đăng ký tư vấn
-            </a>
-          </td>
+    <a href="../../Liên hệ.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
+       style="background-color: #173d7a; color: #fff; padding: 10px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block; white-space: nowrap;">
+        Đăng ký tư vấn
+    </a>
+</td>
     </tr>
   `).join("");
 }

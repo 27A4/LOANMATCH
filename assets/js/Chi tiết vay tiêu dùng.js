@@ -125,13 +125,14 @@ async function init() {
       <td>${bank.process}</td>
       <td>${bank.repayment}</td>
       <td>${bank.fees}</td>
-      <td>
-      <a
-  class="consult-btn"
-  href="../../Đăng ký tư vấn.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
->
-  Đăng ký tư vấn
-</a>
+      <td style="padding: 12px; text-align: center;">
+    <a
+        class="consult-btn"
+        href="../../Liên hệ.html?bank=${encodeURIComponent(bank.name)}&product=${encodeURIComponent(data.name)}"
+        style="background-color: #173d7a; color: #fff; padding: 10px 14px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-block; white-space: nowrap;"
+    >
+        Đăng ký tư vấn
+    </a>
 </td>
     </tr>
   `).join("");
